@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My ToDo</title>
+</head>
+<body>
+    
+    <section class="header">
+        <div class="counter-container">
+            <div class="search">
+                <input type="text" class="inputSearchHeader" id="inputSearchHeader" placeholder="Search..." >
+                <button class="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="active" id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="icon" id="toggle">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+            </button>
+        </nav>
+    </section>
+
+     <div class="container">
+        <div class="clock-main-container">
+          <div id="Clock">
+            <button class="toggleClock">Dark mode</button>
+            
+        <div class="clock-container">
+        <div class="clock">
+            <div class="needle hour"></div>
+            <div class="needle minute"></div>
+            <div class="needle second"></div>
+            <div class="center-point"></div>
+        </div>
+        <div class="clock-time"></div> 
+        <div class="date"> <span class="circle"></span></div>
+        </div>
+        </div>  
+        </div>
+        
+
+        <div class="toDo-container">
+           <button class="fa-solid fa-square-plus addButton" id="addButton"></button>
+        <ul class="mainUl">
+            
+            
+        </ul> 
+        </div>
+        
+    </div>
+
+    <div class="github-container">
+        <form class="user-form" id="formGithub" >
+            <input type="text" id="searchGithub" placeholder="Search a github user">
+        </form>
+    
+        <main id="mainGithub">
+            
+        </main>
+    </div>
+
+    <div class="autoText-container">
+        <h1 id="autoText">Starting...</h1>
+    <div>
+        <label for="autoText-speed">Speed</label>
+        <input type="number" id="autoText-speed" name="speed" value="1" min="1" max="5" step="1">
+    </div>
+    </div>
+
+    <div class="countDown-main-container">
+        <div class="countDown-container">
+        <div class="nums">
+            <span class="in">9</span>
+            
+            <span>8</span>
+            <span>7</span>
+            <span>6</span>
+            <span>5</span>
+            <span>4</span>
+            <span>3</span>
+            <span>2</span>
+            <span>1</span>
+            <span>0</span>
+        </div>
+        <h4 class="CountDown-h4">Get Ready</h4>
+    </div>
+
+    <div class="final">
+        
+        <button id="replay">Replay</button>
+    </div>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <img class="carousel-img" src="https://source.unsplash.com/random" alt="">
+                <img class="carousel-img" src="https://images.unsplash.com/photo-1675746242024-8509ae1d7eda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&w=500&q=60" alt="">
+                <img class="carousel-img"  src="https://source.unsplash.com/random" alt="">
+                <img class="carousel-img"  src="https://images.unsplash.com/photo-1675710664482-7209740626fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&" alt="">
+            </div>
+    
+            <div class="buttons-container">
+                <button id="carousel-btn-left" class="carousel-btn">Prev</button>
+                <button id="carousel-btn-right" class="carousel-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-boxes-container">
+        <button id="backgroundBoxes-btn" class="magic">Magic</button>
+
+        <div id="boxes" class="boxes">
+        
+    </div>
+    </div>
+
+    <div class="live-user-filterContainer">
+        <header class="live-user-filterHeader">
+            <h4 class="live-user-filterTitle">Live User Filter</h4>
+            <small class="subtitle">Search by name and\or location</small>
+            <input type="text" id="filter" placeholder="Search">
+        </header>
+
+        <ul id="result" class="user-list">
+           
+            <li>
+                <h3>Loading...</h3>
+            </li>
+        </ul>
+    </div>
+
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question text</h2>
+            <ul class="quizAppUl">
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Question</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Question</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Question</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Question</label>
+                </li>
+            </ul>
+        </div>
+        <button id="quizAppSubmitButton" class="quiz-app-button">Submit</button>
+    </div>
+
+    <div class="insect-game-container">
+        <div class="screen">
+            <h1>Catch the insect</h1>
+            <button class="insect-btn" id="start-btn">Play Game</button>
+        </div>
+    
+        <div class="screen">
+            <h1>What is your "favorite" insect?</h1>
+            <ul class="insects-list">
+                <li><button class="choose-insect-btn">
+                    <p>Fly</p>
+                    <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+                </button>
+                </li>
+                <li><button class="choose-insect-btn">
+                    <p>Spider</p>
+                    <img src="https://pngimg.com/uploads/spider/small/spider_PNG0.png" alt="spider">
+                </button>
+                </li>
+                <li><button class="choose-insect-btn">
+                    <p>Mosquito</p>
+                    <img src="https://pngimg.com/uploads/mosquito/small/mosquito_PNG18152.png" alt="mosquito">
+                </button>
+                </li>
+                <li><button class="choose-insect-btn">
+                    <p>Roach</p>
+                    <img src="https://pngimg.com/uploads/roach/small/roach_PNG12146.png" alt="roach">
+                </button>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="screen game-container" id="game-container">
+            <h3 id="time" class="time">Time: 00:00</h3>
+            <h3 id="score" class="score">Score: 0</h3>
+            <!-- <h5 id="message" class="insect-message">
+                Are you annoyed yet? <br>
+                You are playing an impossible game!
+            </h5> -->
+    
+            
+        </div>
+    </div>  
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js" integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/app.js"></script> 
+<script src="js/hiddenbar.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/hiddenSearchBar.js"></script>
+<script src="js/github.js"></script>
+<script src="js/autoText.js"></script>
+<script src="js/countDown.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/backgroundBoxes.js"></script>
+<script src="js/liveUserFilter.js"></script>
+<script src="js/quizApp.js"></script>
+<script src="js/insectGame.js"></script>
+</body>
+</html>

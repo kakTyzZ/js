@@ -1,0 +1,138 @@
+.github-container {
+  background-color: #2a2a72;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 400px;
+  max-width: 1024px;
+  border-radius: 35px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.github-ul {
+  background-color: #b3a3a3;
+}
+.user-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: #4c2885;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5);
+}
+/* .user-form input:placeholer {
+  color: #bbb;
+} */
+.user-form input:focus {
+  outline: none;
+}
+.card {
+  max-width: 800px;
+  background-color: #4c2885;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.5);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #2a2a72;
+  height: 150px;
+  width: 150px;
+}
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+.user-info h2 {
+  margin-top: 0;
+}
+.user-info ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+.repo {
+  text-decoration: none;
+  color: #eee;
+  background-color: #212a72;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+@media (max-width: 1023px) {
+  .user-form {
+    width: 80%;
+    max-width: 550px;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+  .avatar {
+    height: 125px;
+    width: 125px;
+  }
+  .user-info {
+    margin: 0;
+  }
+}
+@media (max-width: 720px) {
+  .card {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .github-ul {
+    color: white;
+    margin: 0 auto;
+  }
+
+  .avatar {
+    height: 100px;
+    width: 100px;
+  }
+  .user-info {
+    margin: 0;
+  }
+}
+@media (max-width: 425px) {
+  .card {
+    padding: 1rem;
+  }
+  .avatar {
+    height: 75px;
+    width: 75px;
+  }
+  .user-info {
+    margin: 0;
+  }
+}

@@ -1,0 +1,39 @@
+.search {
+  position: relative;
+  height: 40px;
+}
+.search .inputSearchHeader {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 45px;
+  width: 40px;
+  transition: width 2s ease;
+}
+.searchBtn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 40px;
+  transition: transform 0.3s ease;
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+}
+.searchBtn:focus,
+.inputSearchHeader:focus {
+  outline: none;
+}
+
+.search.active .inputSearchHeader {
+  width: 200px;
+}
+
+.search.active .searchBtn {
+  transform: translateX(198px);
+}

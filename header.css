@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  background-color: rgb(217, 230, 170);
+}
+
+.counter-container {
+  color: rgb(223, 185, 185);
+}
+
+.menu {
+  display: flex;
+}/*# sourceMappingURL=header.css.map */

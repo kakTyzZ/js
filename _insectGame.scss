@@ -1,0 +1,223 @@
+.insect-game-container {
+  max-height: 805px;
+  max-width: 805px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: #fff;
+}
+h1 {
+  line-height: 1.4;
+}
+
+.insect-btn {
+  border: 0;
+  background-color: #fff;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.insect-btn:focus {
+  outline: 0;
+}
+.insect-btn:hover {
+  opacity: 0.9;
+}
+
+.screen {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: margin 0.5s ease-in-out;
+}
+.full {
+  min-width: 805px;
+
+  min-height: 805px;
+}
+.full-650 {
+  min-width: 550px;
+  min-height: 550px;
+  max-width: 565px;
+  max-height: 565px;
+}
+.full-424 {
+  min-width: 424px;
+  min-height: 424px;
+  max-width: 424px;
+  max-height: 424px;
+}
+.screen.up {
+  //margin-top: -100vh;
+  /* transform: translate(-230%, -230%); */
+  width: 0;
+  height: 0;
+}
+
+.insects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.insects-list li {
+  margin: 10px;
+}
+
+.choose-insect-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.choose-insect-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+.choose-insect-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-insect-btn img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.game-container {
+  position: relative;
+}
+.time,
+.score {
+  position: absolute;
+}
+.time {
+  left: 20px;
+  z-index: 100;
+  top: -10px;
+}
+.score {
+  right: 20px;
+  top: -10px;
+  z-index: 100;
+}
+.insect-message {
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: trasnform 0.4 ease-in;
+}
+.insect-message.visible {
+  opacity: 1;
+  transform: translate(-50%, 150%);
+}
+
+.insect {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  transition: transform 0.6s ease-in;
+}
+
+.insect.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 660px) {
+  .insect-game-container {
+    max-width: 555px;
+    max-height: 555px;
+  }
+
+  .time {
+    top: 70px;
+    left: 85px;
+  }
+  .score {
+    right: 85px;
+    top: 70px;
+  }
+  .choose-insect-btn {
+    max-width: 100px;
+    max-height: 125px;
+  }
+}
+@media (max-width: 424px) {
+  .insect-game-container {
+    max-width: 424px;
+    max-height: 424px;
+    box-shadow: none;
+  }
+  .game-container {
+    max-width: 424px;
+    max-height: 424px;
+  }
+
+  .time {
+    top: 5px;
+    left: 10px;
+  }
+  .score {
+    right: 10px;
+    top: 5px;
+  }
+  .choose-insect-btn {
+    max-width: 70px;
+    max-height: 100px;
+  }
+  .choose-insect-btn img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .insects-list {
+    max-width: 370px;
+  }
+  .insects-list li {
+    margin: 3px;
+  }
+  .screen h1 {
+    line-height: 1;
+    max-width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

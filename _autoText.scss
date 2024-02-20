@@ -1,0 +1,38 @@
+.autoText-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  background: rgba(28, 121, 160, 0.553);
+  padding: 10px 20px;
+  font-size: 18px;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 25px;
+}
+
+input {
+  width: 50px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: rgb(223, 199, 191);
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+}
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .autoText-container {
+    font-size: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .autoText-container {
+    font-size: 10px;
+  }
+}

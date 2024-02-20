@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgb(232, 251, 251);
+  overflow: hidden;
+}
+.counter-container {
+  display: flex;
+  margin-left: 5%;
+  margin-top: 25px;
+  flex: 20%;
+  padding-bottom: 30px;
+}
+
+nav {
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+
+  transition: width 0.6s linear;
+}
+nav.active {
+  width: 450px;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+nav ul a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.icon {
+  background-color: rgb(232, 251, 251);
+  border: 0;
+  cursor: pointer;
+
+  position: relative;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+}
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
+
+@media (max-width: 1023px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #111010;
+  }
+}
+@media (max-width: 720px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #c72d2d;
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #b8c72d;
+    flex-direction: column;
+  }
+
+  nav.active ul {
+    width: 70%;
+  }
+}

@@ -1,0 +1,119 @@
+@import "_header.scss";
+@import "_hiddenSearchBar.scss";
+@import "_clock.scss";
+@import "_github.scss";
+@import "_autoText.scss";
+@import "_countDown.scss";
+@import "_carousel.scss";
+@import "_backgroundBoxes.scss";
+@import "_liveUserFilter.scss";
+@import "_quizApp.scss";
+@import "_insectGame.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(248, 239, 239);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 2em;
+  margin-right: 35px;
+}
+.toDo-container {
+  min-width: 30%;
+  flex: 1;
+}
+ul {
+  border: 3px solid #ccc;
+  text-decoration: none;
+  list-style-type: none;
+  border-radius: 5px;
+
+  margin: 0;
+  background-color: rgb(175, 232, 221);
+  padding-inline-start: 0;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+li textarea {
+  //padding: 60px;
+}
+.addButton {
+  padding: 15px;
+  font-size: 4rem;
+  border: none;
+  color: rgb(26, 233, 192);
+}
+.divEdit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.saveButton {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 20%;
+  background-color: rgb(246, 186, 109);
+}
+.deleteButton {
+  border: none;
+  border-radius: 20%;
+  background-color: rgb(236, 115, 85);
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 15px;
+}
+
+@media (max-width: 1023px) {
+  .addButton {
+    padding: 12px;
+    font-size: 3rem;
+  }
+  .container {
+    margin: 0;
+  }
+}
+@media (max-width: 720px) {
+  .addButton {
+    padding: 10px;
+    font-size: 2.5rem;
+  }
+  .mainUl li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .toDo-container {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .addButton {
+    padding: 8px;
+    font-size: 2rem;
+  }
+  li textarea {
+    padding: 40px;
+  }
+}
